@@ -6,5 +6,16 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  compress: false,
+  poweredByHeader: false,
 };
-export default config;
+
+const withBundleAnalyzer =
+  process.env.NODE_ENV === "production"
+    ? undefined
+    : require("@next/bundle-analyzer")({
+        enabled: process.env.ANALYZE === "true",
+      });
+
+module.exports =
+  process.env.NODE_ENV === "production" ? config : withBundleAnalyzer(config);
