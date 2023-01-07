@@ -1,3 +1,6 @@
+// @ts-check
+import NextBundleAnalyzer from "@next/bundle-analyzer";
+
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
@@ -11,11 +14,10 @@ const config = {
 };
 
 const withBundleAnalyzer =
-  process.env.NODE_ENV === "production"
-    ? undefined
-    : require("@next/bundle-analyzer")({
+  process.env.ANALYZE === "true"
+    ? NextBundleAnalyzer({
         enabled: process.env.ANALYZE === "true",
-      });
+      })
+    : (_) => _;
 
-module.exports =
-  process.env.NODE_ENV === "production" ? config : withBundleAnalyzer(config);
+export default withBundleAnalyzer(config);
