@@ -19,7 +19,6 @@ const config = {
   poweredByHeader: false,
 };
 
-
 const withBundleAnalyzer = NextBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
