@@ -19,11 +19,8 @@ const config = {
   poweredByHeader: false,
 };
 
-const withBundleAnalyzer =
-  process.env.ANALYZE === "true"
-    ? NextBundleAnalyzer({
-        enabled: process.env.ANALYZE === "true",
-      })
-    : (_) => _;
 
+const withBundleAnalyzer = NextBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 export default withBundleAnalyzer(config);
