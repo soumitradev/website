@@ -1,9 +1,6 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@next/font':
-    specifier: ^13.4.3
-    version: 13.4.3
   '@types/node':
     specifier: 20.2.3
     version: 20.2.3
@@ -185,10 +182,6 @@ packages:
     resolution: {integrity: sha512-5B0uOnh7wyUY9vNNdIA6NUvWozhrZaTMZOzdirYAefqD0ZBK5C/h3+KMYdCKrR7JrXGvVpWnHtv54b3dCzwICA==}
     dependencies:
       glob: 7.1.7
-    dev: false
-
-  /@next/font@13.4.3:
-    resolution: {integrity: sha512-plrCwj4s9fjjcMdkAo+MAVkKuSemRz6XLcow6RdkesEfNyfSD8eMU9+rR3khrXnCZ9zjsf9mcPG5ubvqDXU0mg==}
     dev: false
 
   /@next/swc-darwin-arm64@13.4.3:
