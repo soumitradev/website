@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Roboto_Flex, JetBrains_Mono } from "next/font/google";
@@ -23,7 +24,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <main
       className={`${robotoFlex.variable} ${jetbrainsMono.variable} font-sans`}
     >
-      <Component {...pageProps} />
+      <ThemeProvider attribute="class" enableSystem defaultTheme="dark">
+        <Component {...pageProps} />
+      </ThemeProvider>
     </main>
   );
 }
